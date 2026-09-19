@@ -23,3 +23,6 @@ nyayaflow/chroma_db/
 # OS
 .DS_Store
 Thumbs.db
+# Generated/local project data
+chroma_db/
+uploads/
