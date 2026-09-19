@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NyayaFlow{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">NyayaFlow</a>
+            <span class="tagline">AI-Assisted ODR for India</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/dashboard" id="navDashboard" style="display:none">Dashboard</a>
+            <a href="/admin" id="navAdmin" style="display:none">Admin</a>
+            <a href="/login" id="navLogin">Login</a>
+            <a href="#" id="navLogout" style="display:none" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>NyayaFlow (SulabhODR) - India-centric AI-assisted Online Dispute Resolution</p>
+        <p class="disclaimer">
+            Disclaimer: This platform assists mediation and settlement drafting. 
+            It does not make legally binding judicial decisions or determine civil/criminal liability.
+        </p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

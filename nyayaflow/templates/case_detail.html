@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}NyayaFlow - Case #{{ case_id }}{% endblock %}
+
+{% block content %}
+<section class="case-header">
+    <h2>Case #{{ case_id }}</h2>
+    <span id="caseStatus" class="status-badge">Loading...</span>
+</section>
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="showTab('evidence', this)">Evidence</button>
+    <button class="tab-btn" onclick="showTab('analysis', this)">AI Analysis</button>
+    <button class="tab-btn" onclick="showTab('mediation', this)">Mediation</button>
+    <button class="tab-btn" onclick="showTab('settlement', this)">Settlement</button>
+</div>
+
+<div id="tab-evidence" class="tab-content active">
+    <h3>Upload Evidence</h3>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="evidenceFile" accept=".pdf,.png,.jpg,.jpeg,.txt" required>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    <p id="uploadMsg"></p>
+
+    <h3>Existing Evidence</h3>
+    <div id="evidenceList"><p class="loading">Loading...</p></div>
+</div>
+
+<div id="tab-analysis" class="tab-content">
+    <div class="action-bar">
+        <button class="btn btn-secondary" onclick="runClassification()">Run Classification</button>
+        <button class="btn btn-secondary" onclick="runLegalResearch()">Retrieve Statutes</button>
+    </div>
+    <div id="classificationResult"></div>
+    <div id="legalResearchResult"></div>
+</div>
+
+<div id="tab-mediation" class="tab-content">
+    <div class="action-bar">
+        <button class="btn btn-secondary" onclick="runMediation()">Generate Mediation Suggestions</button>
+    </div>
+    <div id="mediationResult"></div>
+</div>
+
+<div id="tab-settlement" class="tab-content">
+    <div class="action-bar">
+        <label for="overrideTerms">Override Terms (optional):</label>
+        <textarea id="overrideTerms" rows="3" placeholder="Add specific terms you want included..."></textarea>
+        <button class="btn btn-primary" onclick="generateSettlement()">Generate Settlement</button>
+    </div>
+    <div id="settlementResult"></div>
+</div>
+
+<script>
+const CASE_ID = {{ case_id }};
+const token = localStorage.getItem('token');
+if (!token) window.location.href = '/login';
+
+function showTab(tab, button) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    button.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+}
+
+async function loadCase() {
+    const res = await fetch('/cases/' + CASE_ID, {headers: {'Authorization': 'Bearer ' + token}});
+    if (res.status === 401) { logout(); return; }
+    if (res.status === 404) { document.querySelector('.case-header').innerHTML = '<h2>Case not found</h2>'; return; }
+    const c = await res.json();
+    document.getElementById('caseStatus').textContent = c.status;
+    document.getElementById('caseStatus').className = 'status-badge status-' + c.status;
+}
+
+async function loadEvidence() {
+    const res = await fetch('/evidence/case/' + CASE_ID, {headers: {'Authorization': 'Bearer ' + token}});
+    const list = document.getElementById('evidenceList');
+    if (!res.ok) { list.innerHTML = '<p class="error">Failed to load evidence</p>'; return; }
+    const items = await res.json();
+    if (!items.length) { list.innerHTML = '<p class="empty">No evidence uploaded yet.</p>'; return; }
+
+    list.innerHTML = items.map(ev => `
+        <div class="evidence-item">
+            <div class="evidence-meta">
+                <strong>${escapeHtml(ev.file_name)}</strong>
+                <span class="badge">${ev.file_type}</span>
+                <span class="badge">Validation: ${ev.validation_score !== null ? (ev.validation_score * 100).toFixed(0) + '%' : 'N/A'}</span>
+            </div>
+            ${ev.extracted_text ? `<pre class="extracted-text">${escapeHtml(ev.extracted_text.substring(0, 800))}${ev.extracted_text.length > 800 ? '...' : ''}</pre>` : '<p class="muted">No text extracted</p>'}
+        </div>
+    `).join('');
+}
+
+document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const file = document.getElementById('evidenceFile').files[0];
+    if (!file) return;
+    const formData = new FormData();
+    formData.append('file', file);
+
+    document.getElementById('uploadMsg').textContent = 'Uploading and processing... This may take a moment.';
+    try {
+        const res = await fetch('/evidence/upload/' + CASE_ID, {
+            method: 'POST',
+            headers: {'Authorization': 'Bearer ' + token},
+            body: formData
+        });
+        if (res.ok) {
+            document.getElementById('uploadMsg').textContent = 'Upload successful!';
+            document.getElementById('evidenceFile').value = '';
+            loadEvidence();
+        } else {
+            const data = await res.json();
+            document.getElementById('uploadMsg').textContent = 'Error: ' + (data.detail || 'Upload failed');
+        }
+    } catch (err) {
+        document.getElementById('uploadMsg').textContent = 'Network error during upload';
+    }
+});
+
+async function runClassification() {
+    const container = document.getElementById('classificationResult');
+    container.innerHTML = '<p class="loading">Analyzing dispute type...</p>';
+    try {
+        const res = await fetch('/mediate/classify', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token},
+            body: JSON.stringify({case_id: CASE_ID})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            container.innerHTML = `
+                <div class="result-box">
+                    <h4>Classification Result</h4>
+                    <p><strong>Type:</strong> ${data.dispute_type}</p>
+                    <p><strong>Confidence:</strong> ${(data.confidence * 100).toFixed(1)}%</p>
+                    <p><strong>Reasoning:</strong> ${escapeHtml(data.reasoning)}</p>
+                </div>
+            `;
+        } else {
+            container.innerHTML = '<p class="error">Classification failed: ' + (data.detail || 'Unknown error') + '</p>';
+        }
+    } catch (err) {
+        container.innerHTML = '<p class="error">Network error</p>';
+    }
+}
+
+async function runLegalResearch() {
+    const container = document.getElementById('legalResearchResult');
+    container.innerHTML = '<p class="loading">Retrieving relevant statutes...</p>';
+    try {
+        const res = await fetch('/mediate/legal-research', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token},
+            body: JSON.stringify({case_id: CASE_ID})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            let statutesHtml = data.relevant_statutes.map(s => `
+                <div class="statute-card">
+                    <h5>${escapeHtml(s.act_name)} ${s.section ? '- ' + escapeHtml(s.section) : ''}</h5>
+                    <p>${escapeHtml(s.content.substring(0, 500))}${s.content.length > 500 ? '...' : ''}</p>
+                    <small>Relevance: ${(s.relevance_score * 100).toFixed(1)}%</small>
+                </div>
+            `).join('');
+            container.innerHTML = `
+                <div class="result-box">
+                    <h4>Legal Research Summary</h4>
+                    <p>${escapeHtml(data.summary)}</p>
+                    <h5>Relevant Statutes</h5>
+                    ${statutesHtml}
+                </div>
+            `;
+        } else {
+            container.innerHTML = '<p class="error">Legal research failed</p>';
+        }
+    } catch (err) {
+        container.innerHTML = '<p class="error">Network error</p>';
+    }
+}
+
+async function runMediation() {
+    const container = document.getElementById('mediationResult');
+    container.innerHTML = '<p class="loading">Generating mediation suggestions...</p>';
+    try {
+        const res = await fetch('/mediate/suggest', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token},
+            body: JSON.stringify({case_id: CASE_ID})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            container.innerHTML = `
+                <div class="result-box">
+                    <h4>Mediation Analysis</h4>
+                    <div class="positions">
+                        <div class="position-box">
+                            <h5>Party A Position</h5>
+                            <p>${escapeHtml(data.party_a_position)}</p>
+                        </div>
+                        <div class="position-box">
+                            <h5>Party B Position</h5>
+                            <p>${escapeHtml(data.party_b_position)}</p>
+                        </div>
+                    </div>
+                    <h5>Common Ground</h5>
+                    <ul>${(data.common_ground || []).map(c => `<li class="success">${escapeHtml(c)}</li>`).join('')}</ul>
+                    <h5>Suggested Options</h5>
+                    <ul>${(data.suggestions || []).map(s => `<li class="info">${escapeHtml(s)}</li>`).join('')}</ul>
+                    <h5>Risk Assessment</h5>
+                    <p class="warning">${escapeHtml(data.risks_assessment)}</p>
+                </div>
+            `;
+        } else {
+            container.innerHTML = '<p class="error">Mediation generation failed</p>';
+        }
+    } catch (err) {
+        container.innerHTML = '<p class="error">Network error</p>';
+    }
+}
+
+async function generateSettlement() {
+    const container = document.getElementById('settlementResult');
+    const terms = document.getElementById('overrideTerms').value;
+    container.innerHTML = '<p class="loading">Drafting settlement agreement...</p>';
+    try {
+        const res = await fetch('/mediate/settlement', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token},
+            body: JSON.stringify({case_id: CASE_ID, terms: terms || null})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            let paymentHtml = '';
+            if (data.payment_schedule) {
+                paymentHtml = `<div class="payment-schedule">
+                    <h5>Payment Schedule</h5>
+                    <p>Total: ${escapeHtml(data.payment_schedule.total_amount || 'N/A')}</p>
+                    ${data.payment_schedule.installments ? '<ul>' + data.payment_schedule.installments.map(i => 
+                        `<li>${escapeHtml(i.due_date)} - ${escapeHtml(i.amount)} (${escapeHtml(i.description)})</li>`
+                    ).join('') + '</ul>' : ''}
+                </div>`;
+            }
+            container.innerHTML = `
+                <div class="result-box">
+                    <h4>Proposed Settlement Agreement</h4>
+                    <pre class="settlement-draft">${escapeHtml(data.draft_text)}</pre>
+                    ${paymentHtml}
+                    ${data.pdf_url ? `<a href="${data.pdf_url}" class="btn btn-primary" download>Download PDF</a>` : ''}
+                </div>
+            `;
+        } else {
+            container.innerHTML = '<p class="error">Settlement drafting failed</p>';
+        }
+    } catch (err) {
+        container.innerHTML = '<p class="error">Network error</p>';
+    }
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text || '';
+    return div.innerHTML;
+}
+
+loadCase();
+loadEvidence();
+</script>
+{% endblock %}

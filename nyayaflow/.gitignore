@@ -1,0 +1,33 @@
+.env
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+uploads/
+chroma_db/
+*.db
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Testing/cache
+.pytest_cache/
+.coverage
+
+# ChromaDB
+chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

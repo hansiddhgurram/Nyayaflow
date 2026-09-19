@@ -1,0 +1,77 @@
+INFORMATION TECHNOLOGY ACT, 2000 (India)
+
+Source: https://www.indiacode.nic.in/handle/123456789/1999
+
+PREAMBLE:
+An Act to provide legal recognition for transactions carried out by means of electronic data interchange and other means of electronic communication, commonly referred to as "electronic commerce", which involve the use of alternatives to paper-based methods of communication and storage of information, to facilitate electronic filing of documents with the Government agencies and further to amend the Indian Penal Code, the Indian Evidence Act, 1872, the Bankers' Books Evidence Act, 1891 and the Reserve Bank of India Act, 1934 and for matters connected therewith or incidental thereto.
+
+SECTION 1 - SHORT TITLE, EXTENT, COMMENCEMENT:
+(1) This Act may be called the Information Technology Act, 2000.
+(2) It extends to the whole of India.
+
+SECTION 2 - DEFINITIONS:
+(1) "Computer" means any electronic, magnetic, optical or other high-speed data processing device or system.
+(2) "Computer network" means the interconnection of one or more computers through satellite, microwave, terrestrial line or other communication media.
+(3) "Computer system" means a device or collection of devices, including input and output support devices.
+(4) "Data" means a representation of information, knowledge, facts, concepts or instructions.
+(5) "Digital signature" means authentication of any electronic record by a subscriber by means of an electronic method.
+(6) "Electronic record" means data, record or data generated, image or sound stored, received or sent in an electronic form.
+(7) "Information" includes data, text, images, sound, codes, computer programmes, software and databases.
+
+SECTION 3 - AUTHENTICATION OF ELECTRONIC RECORDS:
+(1) Subject to the provisions of this section any subscriber may authenticate an electronic record by affixing his digital signature.
+(2) The authentication of the electronic record shall be effected by the use of asymmetric crypto system.
+
+SECTION 4 - LEGAL RECOGNITION OF ELECTRONIC RECORDS:
+(1) Where any law provides that information or any other matter shall be in writing or in the typewritten or printed form, then, notwithstanding anything contained in such law, such requirement shall be deemed to have been satisfied if such information or matter is rendered or made available in an electronic form.
+
+SECTION 5 - LEGAL RECOGNITION OF DIGITAL SIGNATURES:
+(1) Where any law provides that information or any other matter shall be authenticated by affixing the signature, then, such requirement shall be deemed to have been satisfied if such information or matter is authenticated by means of a digital signature affixed in such manner as may be prescribed.
+
+SECTION 6 - USE OF ELECTRONIC RECORD AND DIGITAL SIGNATURE IN GOVERNMENT AND ITS AGENCIES:
+(1) Where any law provides for the filing of any form, application or any other document with any office, then, such requirement shall be deemed to have been satisfied if such filing is made electronically.
+
+SECTION 10 - POWER TO MAKE RULES BY CENTRAL GOVERNMENT:
+The Central Government may make rules to carry out the provisions of this Act.
+
+SECTION 43 - PENALTY AND COMPENSATION FOR DAMAGE TO COMPUTER, COMPUTER SYSTEM, ETC.:
+(1) If any person without permission of the owner or any other person who is in charge of a computer, computer system or computer network accesses or secures access to such computer, computer system or computer network, he shall be liable to pay damages by way of compensation not exceeding one crore rupees.
+
+SECTION 43A - COMPENSATION FOR FAILURE TO PROTECT DATA:
+(1) Where a body corporate, possessing, dealing or handling any sensitive personal data or information in a computer resource which it owns, controls or operates, is negligent in implementing and maintaining reasonable security practices and procedures and thereby causes wrongful loss or wrongful gain to any person, such body corporate shall be liable to pay damages by way of compensation.
+
+SECTION 65 - TAMPERING WITH COMPUTER SOURCE DOCUMENTS:
+Whoever knowingly or intentionally conceals, destroys or alters or intentionally or knowingly causes another to conceal, destroy or alter any computer source code used for a computer, computer programme, computer system or computer network, shall be punishable with imprisonment up to three years, or with fine which may extend up to two lakh rupees, or with both.
+
+SECTION 66 - COMPUTER RELATED OFFENCES:
+If any person, dishonestly or fraudulently, does any act referred to in section 43, he shall be punishable with imprisonment for a term which may extend to three years or with fine which may extend to five lakh rupees or with both.
+
+SECTION 66C - PUNISHMENT FOR IDENTITY THEFT:
+Whoever, fraudulently or dishonestly make use of the electronic signature, password or any other unique identification feature of any other person, shall be punished with imprisonment of either description for a term which may extend to three years and shall also be liable to fine which may extend to rupees one lakh.
+
+SECTION 66D - PUNISHMENT FOR CHEATING BY PERSONATION BY USING COMPUTER RESOURCE:
+Whoever, by means of any communication device or computer resource cheats by personation, shall be punished with imprisonment of either description for a term which may extend to three years and shall also be liable to fine which may extend to one lakh rupees.
+
+SECTION 67 - PUNISHMENT FOR PUBLISHING OR TRANSMITTING OBSCENE MATERIAL IN ELECTRONIC FORM:
+Whoever publishes or transmits or causes to be published or transmitted in the electronic form, any material which is lascivious or appeals to the prurient interest, shall be punished on first conviction with imprisonment and fine.
+
+SECTION 72 - PENALTY FOR BREACH OF CONFIDENTIALITY AND PRIVACY:
+(1) Save as otherwise provided in this Act or any other law for the time being in force, if any person who, in pursuance of any of the powers conferred under this Act, has secured access to any electronic record, book, register, correspondence, information, document or other material without the consent of the person concerned, discloses such material to any other person, shall be punished with imprisonment and fine.
+
+SECTION 79 - EXEMPTION FROM LIABILITY OF INTERMEDIARY IN CERTAIN CASES:
+(1) Notwithstanding anything contained in any law for the time being in force but subject to the provisions of sub-sections (2) and (3), an intermediary shall not be liable for any third party information, data, or communication link made available or hosted by him.
+(2) The provisions of sub-section (1) shall apply if the function of the intermediary is limited to providing access to a communication system over which information made available by third parties is transmitted or temporarily stored or hosted.
+(3) The intermediary, on whose computer system the information is stored or hosted or published, upon obtaining knowledge by itself or being brought to actual knowledge about any such information as mentioned in sub-section (2), shall act within thirty-six hours to disable such information.
+
+AMENDMENTS:
+- Information Technology (Amendment) Act, 2008 introduced Section 66A (struck down by Supreme Court in Shreya Singhal v. Union of India, 2015)
+- Digital Personal Data Protection Act, 2023 now governs data protection
+- Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 regulate intermediaries
+
+KEY PRINCIPLES:
+- Electronic records have same legal validity as paper records
+- Digital signatures are legally recognized
+- Intermediaries have conditional safe harbor
+- Unauthorized access to computer systems is penalized
+- Data protection obligations on body corporates
+- Identity theft and cheating by personation are criminal offenses

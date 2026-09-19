@@ -1,0 +1,72 @@
+MICRO, SMALL AND MEDIUM ENTERPRISES DEVELOPMENT ACT, 2006 (MSMED Act, 2006)
+
+Source: https://www.indiacode.nic.in/handle/123456789/2989
+
+PREAMBLE:
+An Act to provide for facilitating the promotion and development and enhancing the competitiveness of micro, small and medium enterprises and for matters connected therewith or incidental thereto.
+
+SECTION 1 - SHORT TITLE AND COMMENCEMENT:
+(1) This Act may be called the Micro, Small and Medium Enterprises Development Act, 2006.
+(2) It shall come into force on such date as the Central Government may, by notification, appoint.
+
+SECTION 2 - DEFINITIONS:
+(1) "Administrator" means the Administrator appointed under sub-section (1) of section 5.
+(2) "Advisory Committee" means the Advisory Committee constituted under sub-section (1) of section 6.
+(3) "Buyer" means a person who buys any goods or receives any services from a supplier for consideration.
+(4) "Goods" means every kind of movable property other than actionable claims and money.
+(5) "Medium enterprise" means an enterprise classified as such under sub-section (1) of section 7.
+(6) "Micro enterprise" means an enterprise classified as such under sub-section (1) of section 7.
+(7) "Small enterprise" means an enterprise classified as such under sub-section (1) of section 7.
+(8) "Supplier" means a micro or small enterprise which supplies goods or renders any services to a buyer.
+
+SECTION 7 - CLASSIFICATION OF ENTERPRISES:
+(1) Notwithstanding anything contained in section 11B of the Industries (Development and Regulation) Act, 1951, the Central Government may, by notification, classify any class or classes of enterprises as micro, small or medium enterprises.
+(2) The classification may be based on the investment in plant and machinery or equipment and annual turnover.
+
+SECTION 8 - MEMORANDUM OF MICRO, SMALL AND MEDIUM ENTERPRISE:
+(1) Any person who intends to establish a micro, small or medium enterprise may file a memorandum with the authority.
+(2) The memorandum shall be filed in such form and manner as may be prescribed.
+
+SECTION 9 - FACILITATION OF CREDIT:
+The Central Government or the State Government may, on the recommendation of the Council, issue instructions to specified institutions for facilitating credit to micro, small and medium enterprises.
+
+SECTION 15 - LIABILITY OF BUYER TO MAKE PAYMENT:
+(1) Where any supplier supplies any goods or renders any services to any buyer, the buyer shall make payment therefor on or before the date agreed upon between him and the supplier in writing.
+(2) Where there is no agreement, the buyer shall make payment before the appointed day.
+(3) The period of credit agreed upon shall not exceed forty-five days.
+
+SECTION 16 - COMPOUND INTEREST ON DELAYED PAYMENT:
+(1) Where any buyer fails to make payment to the supplier within the period specified, the buyer shall be liable to pay compound interest with monthly rests to the supplier on the amount from the appointed day or agreed day.
+(2) The rate of interest shall be three times of the bank rate notified by the Reserve Bank.
+(3) For the purposes of this section, "appointed day" means the day following immediately after the expiry of the period of fifteen days from the day of acceptance or the day of deemed acceptance of any goods or services.
+
+SECTION 17 - RECOVERY OF AMOUNT DUE:
+(1) The amount due and payable to a supplier, together with interest, shall be recoverable as arrears of land revenue.
+(2) The supplier may file an application before the Micro and Small Enterprises Facilitation Council for recovery.
+
+SECTION 18 - REFERENCE TO MICRO AND SMALL ENTERPRISES FACILITATION COUNCIL:
+(1) Any party to a dispute may make a reference to the Micro and Small Enterprises Facilitation Council.
+(2) The Council shall conduct conciliation and if conciliation fails, act as an arbitrator.
+(3) The Council shall make an award within a period of ninety days from the date of reference.
+
+SECTION 19 - APPEAL AGAINST AWARD:
+(1) Any party aggrieved by an award may file an appeal before the court within forty-five days.
+(2) No appeal shall be entertained unless the appellant has deposited seventy-five per cent of the amount awarded.
+
+SECTION 20 - JURISDICTION OF COURTS:
+No civil court shall have jurisdiction to entertain any suit or proceeding in respect of any matter which the Council is empowered to determine.
+
+SECTION 22 - POWER TO MAKE RULES:
+The Central Government may, by notification, make rules for carrying out the provisions of this Act.
+
+SECTION 23 - POWER TO REMOVE DIFFICULTIES:
+If any difficulty arises in giving effect to the provisions of this Act, the Central Government may make such provisions not inconsistent with this Act as may appear necessary.
+
+KEY PRINCIPLES:
+- Buyers must pay MSME suppliers within 45 days (or agreed period, max 45 days)
+- Delayed payment attracts compound interest at 3x RBI bank rate (monthly rests)
+- MSE Facilitation Council handles conciliation and arbitration
+- Awards are made within 90 days
+- Appeals require 75% deposit of awarded amount
+- No civil court jurisdiction for matters under this Act
+- Classification based on investment and turnover thresholds

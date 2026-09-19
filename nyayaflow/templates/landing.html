@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}NyayaFlow - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>NyayaFlow</h1>
+    <h2>AI-Assisted Online Dispute Resolution for India</h2>
+    <p class="lead">
+        Resolve disputes efficiently through AI-powered evidence analysis, 
+        Indian legal statute retrieval, and assisted mediation.
+    </p>
+    <div class="hero-actions">
+        <a href="/login" class="btn btn-primary">Get Started</a>
+        <a href="#features" class="btn btn-secondary">Learn More</a>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <h3>How It Works</h3>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>1. Upload Evidence</h4>
+            <p>Parties upload invoices, contracts, receipts, or chat logs. 
+            OCR and AI extract entities, amounts, dates, and timelines automatically.</p>
+        </div>
+        <div class="feature-card">
+            <h4>2. Legal Research</h4>
+            <p>The system retrieves relevant Indian statutes from verified sources 
+            including the Mediation Act 2023, Consumer Protection Act 2019, and more.</p>
+        </div>
+        <div class="feature-card">
+            <h4>3. AI Mediation</h4>
+            <p>AI identifies common ground and suggests fair settlement options 
+            without determining liability or blame.</p>
+        </div>
+        <div class="feature-card">
+            <h4>4. Settlement Draft</h4>
+            <p>A proposed Mediated Settlement Agreement is generated, 
+            including payment schedules and confidentiality clauses.</p>
+        </div>
+        <div class="feature-card">
+            <h4>5. Admin Review</h4>
+            <p>An administrator reviews the AI outputs, requests more evidence if needed, 
+            and approves or rejects the settlement draft.</p>
+        </div>
+        <div class="feature-card">
+            <h4>6. PDF Export</h4>
+            <p>Download a professionally formatted settlement agreement 
+            ready for signature and execution under Indian law.</p>
+        </div>
+    </div>
+</section>
+
+<section class="legal-framework">
+    <h3>Legal Framework</h3>
+    <p>All legal references are grounded in authoritative Indian statutes:</p>
+    <ul class="statute-list">
+        <li>Mediation Act, 2023</li>
+        <li>Consumer Protection Act, 2019</li>
+        <li>Indian Contract Act, 1872</li>
+        <li>Information Technology Act, 2000</li>
+        <li>MSMED Act, 2006</li>
+    </ul>
+    <p class="source-note">Sources: <a href="https://www.indiacode.nic.in" target="_blank">India Code</a> (Official Government Repository)</p>
+</section>
+
+<section class="supported-types">
+    <h3>Supported Dispute Types</h3>
+    <div class="type-tags">
+        <span class="tag">Consumer</span>
+        <span class="tag">Freelance</span>
+        <span class="tag">MSME</span>
+        <span class="tag">Rental</span>
+        <span class="tag">Service</span>
+    </div>
+</section>
+{% endblock %}

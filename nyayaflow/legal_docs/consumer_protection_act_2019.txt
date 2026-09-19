@@ -1,0 +1,88 @@
+CONSUMER PROTECTION ACT, 2019
+
+Source: https://www.indiacode.nic.in/handle/123456789/15141
+
+PREAMBLE:
+An Act to provide for protection of the interests of consumers and for the said purpose, to establish authorities for timely and effective administration and settlement of consumers' disputes and for matters connected therewith or incidental thereto.
+
+SECTION 1 - SHORT TITLE, EXTENT AND COMMENCEMENT:
+(1) This Act may be called the Consumer Protection Act, 2019.
+(2) It extends to the whole of India except the State of Jammu and Kashmir.
+
+SECTION 2 - DEFINITIONS:
+(1) "Appropriate laboratory" means a laboratory or an organisation recognised by the Central Government or a State Government.
+(2) "Complainant" means a consumer, any voluntary consumer association, the Central Government or any State Government, the Central Authority, one or more consumers where there are numerous consumers having the same interest.
+(3) "Complaint" means any allegation in writing, made by a complainant, that the goods or services suffered from defects or deficiencies.
+(4) "Consumer" means any person who buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods.
+(5) "Defect" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law.
+(6) "Deficiency" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law.
+(7) "E-commerce" means buying or selling of goods or services including digital products over digital or electronic network.
+(8) "Electronic service provider" means a person who provides technologies or processes to enable a product seller to engage in e-commerce.
+(9) "Product liability" means the responsibility of a product manufacturer or product seller of any product or service to compensate for any harm caused to a consumer by such defective product or deficient service.
+(10) "Product manufacturer" means a person who makes, fabricates, or assembles parts into a product.
+(11) "Product seller" means a person who sells a product.
+(12) "Unfair contract" means a contract between a manufacturer or trader or service provider and a consumer, which causes significant change in consumer rights.
+
+SECTION 3 - ACT NOT IN DEROGATION OF ANY OTHER LAW:
+The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.
+
+SECTION 10 - JURISDICTION OF DISTRICT COMMISSION:
+(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees.
+
+SECTION 35 - FILING OF COMPLAINT:
+(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with the District Commission by the complainant.
+(2) A complaint shall be filed within two years from the date on which the cause of action has arisen.
+
+SECTION 36 - PROCEDURE ON ADMISSION OF COMPLAINT:
+(1) The District Commission shall, on admission of a complaint, if it relates to any goods, refer a copy of the admitted complaint to the opposite party directing him to give his version of the case within a period of thirty days.
+(2) Where the opposite party denies or disputes the allegations, the District Commission shall proceed to settle the consumer dispute in the manner specified.
+
+SECTION 38 - PROCEDURE IN RESPECT OF DISPUTES WITH NO JURISDICTION:
+Where a complaint is filed before the District Commission and it appears that it has no jurisdiction, it shall refer the complaint to the State Commission or National Commission.
+
+SECTION 47 - JURISDICTION OF STATE COMMISSION:
+(1) Subject to the other provisions of this Act, the State Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration exceeds one crore rupees but does not exceed ten crore rupees.
+
+SECTION 49 - JURISDICTION OF NATIONAL COMMISSION:
+(1) Subject to the other provisions of this Act, the National Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration exceeds ten crore rupees.
+
+SECTION 58 - REVISIONAL POWERS OF NATIONAL COMMISSION:
+The National Commission shall have the power to call for the records and pass appropriate orders in any consumer dispute which is pending before or has been decided by any State Commission.
+
+SECTION 81 - ESTABLISHMENT OF CENTRAL CONSUMER PROTECTION AUTHORITY:
+(1) The Central Government shall, by notification, establish an Authority to be known as the Central Consumer Protection Authority.
+(2) The Central Authority shall be a body corporate by the name having perpetual succession and a common seal.
+(3) The Central Authority shall regulate matters relating to violation of rights of consumers, unfair trade practices and false or misleading advertisements.
+
+SECTION 88 - POWER OF CENTRAL AUTHORITY TO ISSUE DIRECTIONS AND PENALTY:
+(1) Where the Central Authority is satisfied on the basis of investigation that there is sufficient evidence of violation of consumer rights or unfair trade practice, it may issue directions to the concerned person to discontinue such practice.
+(2) The Central Authority may impose on the manufacturer or endorser a penalty which may extend to ten lakh rupees for false or misleading advertisement.
+
+SECTION 94 - OFFENCES AND PENALTIES:
+(1) Whoever fails to comply with any direction of the Central Authority shall be punished with imprisonment for a term which may extend to six months, or with fine which may extend to twenty lakh rupees, or with both.
+
+SECTION 99 - PRODUCT LIABILITY ACTION:
+(1) A product liability action may be brought by a complainant against a product manufacturer or a product service provider or a product seller, as the case may be, for any harm caused to him on account of defective product or deficient service.
+
+SECTION 100 - LIABILITY OF PRODUCT MANUFACTURER:
+A product manufacturer shall be liable in a product liability action if the product contains a manufacturing defect, or is defective in design, or does not conform to manufacturing specifications.
+
+SECTION 101 - LIABILITY OF PRODUCT SERVICE PROVIDER:
+A product service provider shall be liable in a product liability action if the service is deficient, or the service provider fails to issue adequate instructions or warnings.
+
+SECTION 102 - LIABILITY OF PRODUCT SELLER:
+A product seller who is not a product manufacturer shall be liable in a product liability action if he has exercised substantial control over the designing, testing, manufacturing, or packaging.
+
+SECTION 107 - ESTABLISHMENT OF CONSUMER MEDIATION CELL:
+(1) There shall be established by the District Commission, a Consumer Mediation Cell attached to it.
+(2) The Mediation Cell shall have a panel of mediators.
+(3) The District Commission may refer any consumer dispute to mediation.
+
+KEY PRINCIPLES:
+- Three-tier redressal mechanism: District (up to 1 crore), State (1-10 crores), National (above 10 crores)
+- Central Consumer Protection Authority (CCPA) regulates unfair practices and misleading ads
+- Product liability provisions hold manufacturers, service providers, and sellers accountable
+- E-commerce and electronic service providers are specifically covered
+- Consumer Mediation Cells are established for mediation of consumer disputes
+- Complaint must be filed within 2 years of cause of action
+- Unfair contracts can be challenged

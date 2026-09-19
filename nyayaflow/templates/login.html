@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}NyayaFlow - Login{% endblock %}
+
+{% block content %}
+<section class="auth-section">
+    <div class="auth-card">
+        <h2>Access NyayaFlow</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('login', this)">Login</button>
+            <button class="tab-btn" onclick="switchTab('register', this)">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <p id="loginError" class="error-msg"></p>
+        </form>
+
+        <form id="registerForm" class="auth-form" style="display:none">
+            <div class="form-group">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" required placeholder="Min 6 characters">
+            </div>
+            <div class="form-group">
+                <label for="regPhone">Phone (optional)</label>
+                <input type="tel" id="regPhone" placeholder="+91 98765 43210">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <p id="regError" class="error-msg"></p>
+        </form>
+    </div>
+</section>
+
+<script>
+function switchTab(tab, button) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    if (tab === 'login') {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+    } else {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
+    }
+}
+
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const formData = new URLSearchParams();
+    formData.append('username', email);
+    formData.append('password', password);
+
+    try {
+        const res = await fetch('/auth/login', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: formData
+        });
+        const data = await res.json();
+        if (res.ok) {
+            localStorage.setItem('token', data.access_token);
+            localStorage.setItem('user', JSON.stringify(data.user));
+            window.location.href = '/dashboard';
+        } else {
+            document.getElementById('loginError').textContent = data.detail || 'Login failed';
+        }
+    } catch (err) {
+        document.getElementById('loginError').textContent = 'Network error. Is the backend running?';
+    }
+});
+
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payload = {
+        email: document.getElementById('regEmail').value,
+        password: document.getElementById('regPassword').value,
+        full_name: document.getElementById('regName').value,
+        phone: document.getElementById('regPhone').value || null
+    };
+
+    try {
+        const res = await fetch('/auth/register', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.ok) {
+            localStorage.setItem('token', data.access_token);
+            localStorage.setItem('user', JSON.stringify(data.user));
+            window.location.href = '/dashboard';
+        } else {
+            document.getElementById('regError').textContent = data.detail || 'Registration failed';
+        }
+    } catch (err) {
+        document.getElementById('regError').textContent = 'Network error. Is the backend running?';
+    }
+});
+</script>
+{% endblock %}

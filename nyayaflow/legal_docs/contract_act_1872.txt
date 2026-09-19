@@ -1,0 +1,103 @@
+INDIAN CONTRACT ACT, 1872
+
+Source: https://www.indiacode.nic.in/handle/123456789/2187
+
+PREAMBLE:
+Whereas it is expedient to define and amend certain parts of the law relating to contracts; It is hereby enacted as follows:
+
+SECTION 1 - SHORT TITLE:
+This Act may be called the Indian Contract Act, 1872. It extends to the whole of India except the State of Jammu and Kashmir.
+
+SECTION 2 - INTERPRETATION CLAUSE:
+(a) When one person signifies to another his willingness to do or to abstain from doing anything, with a view to obtaining the assent of that other to such act or abstinence, he is said to make a proposal.
+(b) When the person to whom the proposal is made signifies his assent thereto, the proposal is said to be accepted. A proposal, when accepted, becomes a promise.
+(c) The person making the proposal is called the "promisor"; the person accepting the proposal is called the "promisee".
+(d) When, at the desire of the promisor, the promisee or any other person has done or abstained from doing, or does or abstains from doing, or promises to do or to abstain from doing, something, such act or abstinence or promise is called a consideration for the promise.
+(e) Every promise and every set of promises, forming the consideration for each other, is an agreement.
+(f) An agreement not enforceable by law is said to be void.
+(g) An agreement enforceable by law is a contract.
+(h) An agreement which is enforceable by law at the option of one or more of the parties thereto, but not at the option of the other or others, is a voidable contract.
+
+SECTION 10 - WHAT AGREEMENTS ARE CONTRACTS:
+All agreements are contracts if they are made by the free consent of parties competent to contract, for a lawful consideration and with a lawful object, and are not hereby expressly declared to be void.
+
+SECTION 11 - WHO ARE COMPETENT TO CONTRACT:
+Every person is competent to contract who is of the age of majority according to the law to which he is subject, and who is of sound mind, and is not disqualified from contracting by any law to which he is subject.
+
+SECTION 12 - WHAT IS A SOUND MIND FOR THE PURPOSES OF CONTRACTING:
+A person is said to be of sound mind for the purpose of making a contract if, at the time when he makes it, he is capable of understanding it and of forming a rational judgment as to its effect upon his interests.
+
+SECTION 13 - CONSENT DEFINED:
+Two or more persons are said to consent when they agree upon the same thing in the same sense.
+
+SECTION 14 - FREE CONSENT DEFINED:
+Consent is said to be free when it is not caused by coercion, undue influence, fraud, misrepresentation, or mistake.
+
+SECTION 15 - COERCION:
+"Coercion" is the committing, or threatening to commit, any act forbidden by the Indian Penal Code, or the unlawful detaining, or threatening to detain, any property, to the prejudice of any person whatever, with the intention of causing any person to enter into an agreement.
+
+SECTION 16 - UNDUE INFLUENCE:
+(1) A contract is said to be induced by "undue influence" where the relations subsisting between the parties are such that one of the parties is in a position to dominate the will of the other and uses that position to obtain an unfair advantage over the other.
+
+SECTION 17 - FRAUD:
+"Fraud" means and includes any of the following acts committed by a party to a contract, or with his connivance, or by his agent, with intent to deceive another party thereto or his agent, or to induce him to enter into the contract:
+(a) the suggestion, as a fact, of that which is not true, by one who does not believe it to be true;
+(b) the active concealment of a fact by one having knowledge or belief of the fact;
+(c) a promise made without any intention of performing it;
+(d) any other act fitted to deceive;
+(e) any such act or omission as the law specially declares to be fraudulent.
+
+SECTION 18 - MISREPRESENTATION:
+"Misrepresentation" means and includes:
+(a) the positive assertion, in a manner not warranted by the information of the person making it, of that which is not true, though he believes it to be true;
+(b) any breach of duty which, without an intent to deceive, gains an advantage to the person committing it, or any one claiming under him, by misleading another to his prejudice.
+
+SECTION 19 - VOIDABILITY OF AGREEMENTS WITHOUT FREE CONSENT:
+When consent to an agreement is caused by coercion, fraud or misrepresentation, the agreement is a contract voidable at the option of the party whose consent was so caused.
+
+SECTION 20 - AGREEMENT VOID WHERE BOTH PARTIES ARE UNDER MISTAKE AS TO MATTER OF FACT:
+Where both the parties to an agreement are under a mistake as to a matter of fact essential to the agreement, the agreement is void.
+
+SECTION 23 - WHAT CONSIDERATIONS AND OBJECTS ARE LAWFUL, AND WHAT NOT:
+The consideration or object of an agreement is lawful, unless it is forbidden by law; or is of such a nature that, if permitted, it would defeat the provisions of any law; or is fraudulent; or involves or implies injury to the person or property of another; or the Court regards it as immoral, or opposed to public policy.
+
+SECTION 25 - AGREEMENT WITHOUT CONSIDERATION, VOID, UNLESS IT IS IN WRITING AND REGISTERED:
+An agreement made without consideration is void, unless it is expressed in writing and registered under the law for the time being in force for the registration of documents, and is made on account of natural love and affection between parties standing in a near relation to each other.
+
+SECTION 27 - AGREEMENT IN RESTRAINT OF TRADE, VOID:
+Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void.
+
+SECTION 37 - OBLIGATION OF PARTIES TO CONTRACTS:
+The parties to a contract must either perform, or offer to perform, their respective promises, unless such performance is dispensed with or excused under the provisions of this Act, or of any other law.
+
+SECTION 39 - EFFECT OF REFUSAL TO ACCEPT OFFER OF PERFORMANCE:
+Where a promisor has made an offer of performance to the promisee, and the offer has not been accepted, the promisor is not responsible for non-performance, nor does he thereby lose his rights under the contract.
+
+SECTION 51 - PROMISOR NOT BOUND TO PERFORM, UNLESS MUTUAL PROMISE READY AND WILLING TO BE PERFORMED:
+Where a contract consists of reciprocal promises to be simultaneously performed, no promisor need perform his promise unless the promisee is ready and willing to perform his reciprocal promise.
+
+SECTION 54 - EFFECT OF DEFAULT AS TO THAT PROMISE WHICH SHOULD BE FIRST PERFORMED, IN CONTRACT CONSISTING OF RECIPROCAL PROMISES:
+Where the order in which reciprocal promises are to be performed is expressly fixed by the contract, they shall be performed in that order; and where the order is not expressly fixed by the contract, they shall be performed in that order which the nature of the transaction requires.
+
+SECTION 56 - AGREEMENT TO DO IMPOSSIBLE ACT:
+An agreement to do an act impossible in itself is void.
+
+SECTION 62 - EFFECT OF NOVATION, RESCISSION, AND ALTERATION OF CONTRACT:
+If the parties to a contract agree to substitute a new contract for it, or to rescind or alter it, the original contract need not be performed.
+
+SECTION 63 - PROMISE MAY DISPENSE WITH OR REMIT PERFORMANCE OF PROMISE:
+Every promisee may dispense with or remit, wholly or in part, the performance of the promise made to him, or may extend the time for such performance, or may accept instead of it any satisfaction which he thinks fit.
+
+SECTION 73 - COMPENSATION FOR LOSS OR DAMAGE CAUSED BY BREACH OF CONTRACT:
+When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it.
+
+SECTION 74 - COMPENSATION FOR BREACH OF CONTRACT WHERE PENALTY STIPULATED FOR:
+When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, or if the contract contains any other stipulation by way of penalty, the party complaining of the breach is entitled, whether or not actual damage or loss is proved to have been caused thereby, to receive from the party who has broken the contract reasonable compensation not exceeding the amount so named or, as the case may be, the penalty stipulated for.
+
+KEY PRINCIPLES:
+- Offer + Acceptance + Consideration + Capacity + Free Consent + Lawful Object = Valid Contract
+- Coercion, undue influence, fraud, misrepresentation, and mistake vitiate consent
+- Agreements without consideration are generally void
+- Restraint of trade agreements are void (with exceptions)
+- Breach of contract entitles the innocent party to compensation
+- Liquidated damages (penalty clauses) are enforceable up to the stipulated amount

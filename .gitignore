@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+nyayaflow/.venv/
+
+# Environment variables
+nyayaflow/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Testing
+.pytest_cache/
+nyayaflow/.pytest_cache/
+
+# ChromaDB
+nyayaflow/chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

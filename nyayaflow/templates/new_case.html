@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}NyayaFlow - New Case{% endblock %}
+
+{% block content %}
+<section class="form-section">
+    <h2>File a New Dispute</h2>
+    <form id="newCaseForm" class="case-form">
+        <div class="form-group">
+            <label for="caseTitle">Case Title</label>
+            <input type="text" id="caseTitle" required placeholder="e.g., Unpaid Invoice for Web Development">
+        </div>
+        <div class="form-group">
+            <label for="caseDesc">Description</label>
+            <textarea id="caseDesc" rows="4" placeholder="Describe the dispute in detail..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="partyBEmail">Opposing Party Email</label>
+            <input type="email" id="partyBEmail" required placeholder="opponent@example.com">
+            <small class="hint">The other party must already be registered on NyayaFlow.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Case</button>
+        <p id="caseError" class="error-msg"></p>
+    </form>
+</section>
+
+<script>
+document.getElementById('newCaseForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem('token');
+    if (!token) { window.location.href = '/login'; return; }
+
+    const payload = {
+        title: document.getElementById('caseTitle').value,
+        description: document.getElementById('caseDesc').value,
+        party_b_email: document.getElementById('partyBEmail').value
+    };
+
+    try {
+        const res = await fetch('/cases', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.ok) {
+            window.location.href = '/case/' + data.id;
+        } else {
+            document.getElementById('caseError').textContent = data.detail || 'Failed to create case';
+        }
+    } catch (err) {
+        document.getElementById('caseError').textContent = 'Network error';
+    }
+});
+</script>
+{% endblock %}
