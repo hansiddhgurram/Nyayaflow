@@ -26,39 +26,6 @@
 - 📄 **Legal PDF Export**: Compiles settlement drafts into execution-ready PDF documents featuring formal recitals, terms, and signature blocks.
 - 🛡️ **Administrator Console**: Human-in-the-loop governance interface to review AI outputs, manage case status (`APPROVED` / `REJECTED`), and inspect full audit logs.
 
----
-
-## 📐 Architecture & Workflow
-
-### End-to-End System Architecture
-
-```mermaid
-graph TD
-    Client[Web Interface / REST API] --> FastAPI[FastAPI Backend]
-    
-    subgraph Core Engine
-        FastAPI --> Auth[JWT Security & Auth]
-        FastAPI --> DB[(SQLite / PostgreSQL Database)]
-        FastAPI --> Router[API Routers]
-    end
-
-    subgraph Multi-Agent Ecosystem
-        Router --> Intake[1. Evidence Intake Agent]
-        Router --> Validate[2. Evidence Validation Agent]
-        Router --> Classify[3. Dispute Classification Agent]
-        Router --> Research[4. Legal Research Agent]
-        Router --> Mediate[5. Mediation Facilitator Agent]
-        Router --> Draft[6. Settlement Drafting Agent]
-        Router --> AdminAgent[7. Administrator Review Agent]
-    end
-
-    subgraph Services & Knowledge Base
-        Research --> RAG[ChromaDB Vector Store]
-        Intake --> OCR[OCR Service: pypdf / Tesseract / OpenCV]
-        Draft --> PDF[PDF Service: ReportLab Engine]
-        Multi-Agent Ecosystem --> LLM[Local Ollama LLM: Gemma 2B]
-    end
-```
 
 ---
 
